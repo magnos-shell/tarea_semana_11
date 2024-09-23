@@ -1,0 +1,34 @@
+# Crear un diccionario
+informacion_personal = {
+    "nombre": "Ana García",
+    "edad": 28,
+    "ciudad": "Madrid",
+    "profesion": "Ingeniera"
+}
+
+print("Diccionario original:")
+print(informacion_personal)
+
+# 1. Acceder y Modificar Valores
+# Modificar la ciudad
+informacion_personal["ciudad"] = "Barcelona"
+
+# La profesión ya existe, pero si no existiera, así es como la agregaríamos:
+# informacion_personal["profesion"] = "Desarrolladora de Software"
+
+print("\nDiccionario después de modificar la ciudad:")
+print(informacion_personal)
+
+# 2. Verificar Existencia de Claves
+if "telefono" not in informacion_personal:
+    informacion_personal["telefono"] = "+34 123 456 789"
+
+print("\nDiccionario después de agregar el teléfono (si no existía):")
+print(informacion_personal)
+
+# 3. Eliminar una Clave
+if "edad" in informacion_personal:
+    del informacion_personal["edad"]
+
+print("\nDiccionario final después de eliminar la edad:")
+print(informacion_personal)
