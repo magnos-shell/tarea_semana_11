@@ -1,0 +1,24 @@
+# 1. Escritura de Archivo de Texto
+# Abrimos el archivo en modo escritura ('w')
+with open('my_notes.txt', 'w') as file:
+    # Escribimos tres líneas de notas personales
+    file.write("Primera nota: Hoy aprendí sobre manejo de archivos en Python.\n")
+    file.write("Segunda nota: El método 'with' es útil para manejar recursos.\n")
+    file.write("Tercera nota: Cerrar archivos es importante para liberar recursos.\n")
+
+print("Archivo 'my_notes.txt' creado y escrito exitosamente.")
+
+# 2. Lectura de Archivo de Texto
+print("\nContenido del archivo 'my_notes.txt':")
+# Abrimos el archivo en modo lectura ('r')
+with open('my_notes.txt', 'r') as file:
+    # Leemos el archivo línea por línea
+    for line in file:
+        # Mostramos cada línea en la consola
+        print(line.strip())  # strip() elimina los saltos de línea extra
+
+# 3. Cierre de Archivos
+# No es necesario cerrar explícitamente los archivos cuando se usa 'with'
+# ya que se cierran automáticamente al salir del bloque 'with'
+
+print("\nOperaciones de archivo completadas.")
